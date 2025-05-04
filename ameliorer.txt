@@ -1,0 +1,42 @@
+https://www.ssa.gov/cgi-bin/popularnames.cgi
+https://nameberry.com/popular-names/nameberry
+https://www.britishbabynames.com/blog/name-lists.html
+
+
+Les noms anglais ont tendance à utiliser des syllabes simples :
+
+VCV				Olivia, Amelia
+CVCV			Lily, Ruby, Tony
+CVCC			Mark, Jack, Clint
+CCV				Chris, Claire
+CVVC			Noah, Liam, Ryan
+VCCV			Elton, Andrew
+
+Les prénoms féminins se terminent souvent par une voyelle :
+→ Anna, Olivia, Clara, Emily
+
+Les noms masculins se terminent souvent par une consonne :
+→ Jack, Brad, Thomas, George
+
+Syllabes souvent répétées (forme double) :
+→ Lulu, Coco, Mimi
+
+
+
+En résumé, ameliorer :
+- scraping
+- Markov, la mutation adoucit le nom même si elle est aléatoire elle doit être raisonnable
+- ajouter une interface
+
+
+
+	mutation : avec des règles phonétiques, ce n'est plus du pur hasard
+
+	k	c, ch, q	
+	e	ae, i, a	
+	j	z, g, zh	
+	s	c, z, x	
+	f	ph, v	
+	o	u, ou, au	
+	t	d, th	
+	y	i, ie	

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Générateur de Noms</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<form method="get" action="/" style="margin-bottom: 20px;">
+  <label for="genre">Genre :</label>
+  <select name="genre" id="genre">
+    <option value="mixte" {% if genre == "mixte" %}selected{% endif %}>Mixte</option>
+    <option value="garcon" {% if genre == "garcon" %}selected{% endif %}>Garçon</option>
+    <option value="fille" {% if genre == "fille" %}selected{% endif %}>Fille</option>
+  </select>
+
+  <label for="nombre" style="margin-left: 20px;">Nombre :</label>
+  <input type="number" name="nombre" id="nombre" min="1" max="100" value="{{ count }}"/>
+</form>
+
+<h1>Noms générés</h1>
+<div style="display: flex; justify-content: center; gap: 50px;">
+  <div>
+    <h3>Prénoms</h3>
+    <ul>
+    {% for name in names %}
+        <li>{{ name.split()[0] }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <h3>Noms de famille</h3>
+    <ul>
+    {% for name in names %}
+        <li>{{ name.split()[1] }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div>
+  <a href="#" onclick="genererPrenoms()" class="button">Générer prénoms</a>
+  <a href="#" onclick="genererNoms()" class="button">Générer noms de famille</a>
+  <div style="margin-top: 20px;">
+      <a href="/generer_tout" class="button">Tout générer</a>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
